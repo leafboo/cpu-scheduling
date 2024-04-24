@@ -1,15 +1,15 @@
 
-export default function Algorithm() {
+export default function Algorithm(props: any) {
+
+  const algorithms = props.algorithms.map((algorithm: any) => 
+    <option value="">{algorithm.name}</option>
+  )
 
   return (
     <div>
       <div>Algorithm:</div>
       <select name="" id="">
-        <option value="">First Come First Served (FCFS)</option>
-        <option value="">Shortest Job First (SJF)</option>
-        <option value="">Shortest Remaining Time First (SRTF)</option>
-        <option value="">Round Robin (RR)</option>
-        <option value="">Priority Scheduling (PR)</option>
+        {algorithms}
       </select>
     </div>
   )
