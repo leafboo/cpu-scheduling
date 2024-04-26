@@ -1,8 +1,8 @@
-export default function Button() {
+export default function Button(props) {
 
   return (
     <div>
-      <button>Solve</button>
+      <button onClick={props.pressButton}>Solve</button>
     </div>
   )
 }

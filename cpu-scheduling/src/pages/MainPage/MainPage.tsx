@@ -16,6 +16,10 @@ export default function MainPage() {
     { id: 4, name: 'Priority Scheduling' },
   ];
 
+  function pressButton() {
+
+  }
+
   return (
     <>
       <Algorithm algorithms={algorithms} />
@@ -23,7 +27,7 @@ export default function MainPage() {
                     setArrivalTimesData={setArrivalTimesData} />
       <BurstTimes />
       <Output />
-      <Button />
+      <Button pressButton={pressButton} />
     </>
   )
 }
