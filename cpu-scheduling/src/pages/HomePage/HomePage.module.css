@@ -1,0 +1,21 @@
+.home-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.start-button {
+  margin-top: 1rem;
+  padding: .7rem 2.6rem;
+  background-color: rgb(35, 127, 219);
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.start-button:hover {
+  background-color: rgb(25, 90, 155);
+}
+
