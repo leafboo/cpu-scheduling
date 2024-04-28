@@ -1,6 +1,12 @@
 import React from 'react'
 import HomePage from './pages/HomePage/HomePage.tsx'
 import MainPage from './pages/MainPage/MainPage.tsx'
+import FCFS from './pages/FCFS/FCFS.tsx'
+import SJF from './pages/SJF/SJF.tsx'
+import SRTF from './pages/SRTF/SRTF.tsx'
+import PR from './pages/PR/PR.tsx'
+import RR from './pages/RR/RR.tsx'
+
 import AppCSS from './App.module.css'
 
 export default function App() {
@@ -29,7 +35,19 @@ export default function App() {
       {
         pageNumber === 2 ? (
           <MainPage changePage={changePage} />
-        ) : (<HomePage changePage={changePage} />)
+        ) : pageNumber === 3 ? (
+          <FCFS />
+        ) :pageNumber === 4 ? (
+          <SJF />
+        ) : pageNumber === 5 ? (
+          <SRTF />
+        ) : pageNumber === 6 ? (
+          <PR />
+        ) : pageNumber === 7 ? (
+          <RR />
+        ) :(
+          <HomePage changePage={changePage} />
+        )
       }
       
     </div>
