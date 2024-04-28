@@ -9,6 +9,15 @@ export default function App() {
     return storedPageNumber ? parseInt(storedPageNumber) : 1;
   });
 
+  const pages = {
+    "Home page": 1,
+    "Main page": 2,
+    "FCFS": 3,
+    "SJF": 4,
+    "SRTF": 5,
+    "PR": 6,
+    "RR": 7
+  }
 
   function changePage(num: number) {
     localStorage.setItem('pageNumber', num.toString())
