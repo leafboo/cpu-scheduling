@@ -15,15 +15,13 @@ export default function App() {
     return storedPageNumber ? parseInt(storedPageNumber) : 1;
   });
 
-  const pages = {
-    "Home page": 1,
-    "Main page": 2,
-    "FCFS": 3,
-    "SJF": 4,
-    "SRTF": 5,
-    "PR": 6,
-    "RR": 7
-  }
+  const algorithms = [
+    {name: "FCFS", pageNumber: 3},
+    {name: "SJF", pageNumber: 4},
+    {name: "SRTF", pageNumber: 5},
+    {name: "PR", pageNumber: 6},
+    {name: "RR", pageNumber: 7}
+  ]
 
   function changePage(num: number) {
     localStorage.setItem('pageNumber', num.toString())
@@ -34,7 +32,7 @@ export default function App() {
     <div className={AppCSS['app-container']}>
       {
         pageNumber === 2 ? (
-          <MainPage changePage={changePage} />
+          <MainPage changePage={changePage} algorithms={algorithms} />
         ) : pageNumber === 3 ? (
           <FCFS />
         ) :pageNumber === 4 ? (

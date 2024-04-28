@@ -4,15 +4,16 @@ import MainPageCSS from './MainPage.module.css'
 
 
 export default function MainPage(props: any) {
+
+  const AlgorithmElement = props.algorithms.map((algo: {name: string; pageNumber: number}) => 
+    <Algorithm name={algo.name} changePage={props.changePage} numPage={algo.pageNumber} />
+  )
  
   return (
     <div className={MainPageCSS['main-page-container']}>
       <button onClick={() => { props.changePage(1) }}>Go Back</button>
-      <Algorithm name={"FCFS"} changePage={props.changePage} />
-      <Algorithm name={"SJF"} changePage={props.changePage} />
-      <Algorithm name={"SRTF"} changePage={props.changePage} />
-      <Algorithm name={"PR"} changePage={props.changePage} />
-      <Algorithm name={"RR"} changePage={props.changePage} />
+      
+      { AlgorithmElement }
     </div>
   )
 }
