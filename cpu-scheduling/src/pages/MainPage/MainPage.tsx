@@ -6,7 +6,7 @@ import MainPageCSS from './MainPage.module.css'
 export default function MainPage(props: any) {
 
   const AlgorithmElement = props.algorithms.map((algo: {name: string; pageNumber: number}) => 
-    <Algorithm name={algo.name} changePage={props.changePage} numPage={algo.pageNumber} />
+    <Algorithm name={algo.name} changePage={props.changePage} pageNumber={algo.pageNumber} />
   )
  
   return (

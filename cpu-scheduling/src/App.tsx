@@ -34,15 +34,15 @@ export default function App() {
         pageNumber === 2 ? (
           <MainPage changePage={changePage} algorithms={algorithms} />
         ) : pageNumber === 3 ? (
-          <FCFS />
+          <FCFS changePage={changePage} />
         ) :pageNumber === 4 ? (
-          <SJF />
+          <SJF changePage={changePage} />
         ) : pageNumber === 5 ? (
-          <SRTF />
+          <SRTF changePage={changePage} />
         ) : pageNumber === 6 ? (
-          <PR />
+          <PR changePage={changePage} />
         ) : pageNumber === 7 ? (
-          <RR />
+          <RR changePage={changePage} />
         ) :(
           <HomePage changePage={changePage} />
         )
