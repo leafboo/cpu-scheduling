@@ -1,4 +1,5 @@
 import React from 'react'
+import GoBack from '../../buttons/GoBack/GoBack.tsx'
 import Compute from '../../buttons/Compute/Compute.tsx'
 import SRTFCSS from './SRTF.module.css'
 
@@ -6,7 +7,8 @@ export default function SRTF(props: any) {
   return (
     <div className={SRTFCSS['srtf-container']}>
       <div>SRTF</div>
-      <button onClick={() => { props.changePage(2) }}>Go Back</button>
+      <GoBack changePage={props.changePage}
+              pageNumber={2} />
 
       <div>
         <label htmlFor="arrival-times">Arrival times:</label>

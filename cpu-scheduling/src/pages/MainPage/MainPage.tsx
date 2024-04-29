@@ -1,5 +1,6 @@
 import React from 'react'
 import Algorithm from '../../buttons/Algorithm/Algorithm.tsx'
+import GoBack from '../../buttons/GoBack/GoBack.tsx'
 import MainPageCSS from './MainPage.module.css'
 
 
@@ -11,7 +12,8 @@ export default function MainPage(props: any) {
  
   return (
     <div className={MainPageCSS['main-page-container']}>
-      <button onClick={() => { props.changePage(1) }}>Go Back</button>
+      <GoBack changePage={props.changePage}
+              pageNumber={1} />
       
       { AlgorithmElement }
     </div>

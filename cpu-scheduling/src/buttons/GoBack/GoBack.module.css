@@ -1,0 +1,11 @@
+.back-button {
+  height: 2rem;
+  width: 6rem;
+  border: 1px solid;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.back-button:hover {
+  background-color: rgb(185, 185, 185);
+}

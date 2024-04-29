@@ -1,12 +1,14 @@
 import React from 'react'
 import Compute from '../../buttons/Compute/Compute.tsx'
+import GoBack from '../../buttons/GoBack/GoBack.tsx'
 import FCFSCSS from './FCFS.module.css'
 
 export default function FCFS(props: any) {
   return (
     <div className={FCFSCSS['fcfs-container']}>
       <div>FCFS</div>
-      <button onClick={() => { props.changePage(2) }}>Go Back</button>
+      <GoBack changePage={props.changePage}
+              pageNumber={2} />
 
       <div>
         <label htmlFor="burst-times">Burst times:</label>
