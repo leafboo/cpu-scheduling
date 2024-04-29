@@ -1,4 +1,5 @@
 import React from 'react'
+import Compute from '../../buttons/Compute/Compute.tsx'
 import PRCSS from './PR.module.css'
 
 export default function PR(props: any) {
@@ -16,6 +17,7 @@ export default function PR(props: any) {
         <br />
         <input type="text" name="" id="priority" />
       </div>
+      <Compute />
     </div>
   )
 }

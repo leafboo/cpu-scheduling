@@ -1,4 +1,5 @@
 import React from 'react'
+import Compute from '../../buttons/Compute/Compute.tsx'
 import SRTFCSS from './SRTF.module.css'
 
 export default function SRTF(props: any) {
@@ -16,6 +17,7 @@ export default function SRTF(props: any) {
         <br />
         <input type="text" name="" id="burst-times" />
       </div>
+      <Compute />
     </div>
   )
 }

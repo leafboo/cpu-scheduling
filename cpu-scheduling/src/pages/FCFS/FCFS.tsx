@@ -1,4 +1,5 @@
 import React from 'react'
+import Compute from '../../buttons/Compute/Compute.tsx'
 import FCFSCSS from './FCFS.module.css'
 
 export default function FCFS(props: any) {
@@ -12,6 +13,7 @@ export default function FCFS(props: any) {
         <br />
         <input type="text" name="" id="burst-times" />
       </div>
+      <Compute />
     </div>
   )
 }

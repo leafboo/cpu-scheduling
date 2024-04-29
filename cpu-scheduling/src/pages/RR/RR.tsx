@@ -1,4 +1,5 @@
 import React from 'react'
+import Compute from '../../buttons/Compute/Compute.tsx'
 import RRCSS from './RR.module.css'
 
 export default function RR(props: any) {
@@ -20,6 +21,7 @@ export default function RR(props: any) {
         <br />
         <input type="text" name="" id="time-quantum" />
       </div>
+      <Compute />
     </div>
   )
 }

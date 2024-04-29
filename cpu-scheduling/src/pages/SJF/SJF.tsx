@@ -1,4 +1,5 @@
 import React from 'react'
+import Compute from '../../buttons/Compute/Compute.tsx'
 import SJFCSS from './SJF.module.css'
 
 export default function SJF(props: any) {
@@ -12,6 +13,7 @@ export default function SJF(props: any) {
         <br />
         <input type="text" name="" id="burst-times" />
       </div>  
+      <Compute />
     </div>
   )
 }
