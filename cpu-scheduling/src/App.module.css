@@ -2,5 +2,13 @@
   display: flex;
   justify-content: center;
   margin-top: 12rem;
+  
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  width: 25rem;
+  border: 1px solid white;
 }
 

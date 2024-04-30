@@ -30,23 +30,26 @@ export default function App() {
 
   return (
     <div className={AppCSS['app-container']}>
-      {
-        pageNumber === 2 ? (
-          <MainPage changePage={changePage} algorithms={algorithms} />
-        ) : pageNumber === 3 ? (
-          <FCFS changePage={changePage} />
-        ) :pageNumber === 4 ? (
-          <SJF changePage={changePage} />
-        ) : pageNumber === 5 ? (
-          <SRTF changePage={changePage} />
-        ) : pageNumber === 6 ? (
-          <PR changePage={changePage} />
-        ) : pageNumber === 7 ? (
-          <RR changePage={changePage} />
-        ) :(
-          <HomePage changePage={changePage} />
-        )
-      }
+      <div className={AppCSS['box']}>
+        {
+          pageNumber === 2 ? (
+            <MainPage changePage={changePage} algorithms={algorithms} />
+          ) : pageNumber === 3 ? (
+            <FCFS changePage={changePage} />
+          ) :pageNumber === 4 ? (
+            <SJF changePage={changePage} />
+          ) : pageNumber === 5 ? (
+            <SRTF changePage={changePage} />
+          ) : pageNumber === 6 ? (
+            <PR changePage={changePage} />
+          ) : pageNumber === 7 ? (
+            <RR changePage={changePage} />
+          ) :(
+            <HomePage changePage={changePage} />
+          )
+        }
+      </div>
+      
       
     </div>
   )

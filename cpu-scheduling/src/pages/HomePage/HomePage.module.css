@@ -8,7 +8,8 @@
 .start-button {
   margin-top: 1rem;
   padding: .7rem 2.6rem;
-  background-color: rgb(35, 127, 219);
+  width: 25rem;
+  background-color: transparent;
   border: none;
   color: white;
   cursor: pointer;
@@ -16,6 +17,6 @@
 }
 
 .start-button:hover {
-  background-color: rgb(25, 90, 155);
+  background-color: rgb(65, 39, 66);
 }
 
