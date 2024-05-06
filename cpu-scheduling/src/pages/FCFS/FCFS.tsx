@@ -19,6 +19,6 @@ export default function FCFS(props: any) {
         </div>
         <Compute burstTimes={props.burstTimes} />
       </div>
-    
+     
   )
 }
