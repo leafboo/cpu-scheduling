@@ -15,6 +15,12 @@ export default function App() {
     return storedPageNumber ? parseInt(storedPageNumber) : 1;
   });
 
+  const [burstTimes, setBurstTimes] = React.useState('');
+  const [arrivalTimes, setArrivalTimes] = React.useState('');
+  const [results, setResults] = React.useState({
+  
+  });
+
   const algorithms = [
     {name: "FCFS", pageNumber: 3},
     {name: "SJF", pageNumber: 4},
@@ -35,7 +41,9 @@ export default function App() {
           pageNumber === 2 ? (
             <MainPage changePage={changePage} algorithms={algorithms} />
           ) : pageNumber === 3 ? (
-            <FCFS changePage={changePage} />
+            <FCFS changePage={changePage}
+                  burstTimes={burstTimes}
+                  setBurstTimes={setBurstTimes} />
           ) :pageNumber === 4 ? (
             <SJF changePage={changePage} />
           ) : pageNumber === 5 ? (
@@ -44,7 +52,7 @@ export default function App() {
             <PR changePage={changePage} />
           ) : pageNumber === 7 ? (
             <RR changePage={changePage} />
-          ) :(
+          ) : (
             <HomePage changePage={changePage} />
           )
         }
