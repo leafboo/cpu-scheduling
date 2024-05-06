@@ -1,7 +1,6 @@
 import React from 'react'
 import Compute from '../../buttons/Compute/Compute.tsx'
 import GoBack from '../../buttons/GoBack/GoBack.tsx'
-import GanttChart from '../../output/ganntChart/GanttChart.tsx'
 import FCFSCSS from './FCFS.module.css'
 
 export default function FCFS(props: any) {
@@ -10,7 +9,6 @@ export default function FCFS(props: any) {
         <div>FCFS</div>
         <GoBack changePage={props.changePage}
                 pageNumber={2} />
-
         <div>
           <label htmlFor="burst-times">Burst times:</label>
           <br />
@@ -19,7 +17,6 @@ export default function FCFS(props: any) {
               props.setBurstTimes(value.split(" ").map(Number)) 
             }} placeholder='e.g. 9 2 6 4' />
         </div>
-        <GanttChart /> 
         <Compute burstTimes={props.burstTimes} />
       </div>
     
