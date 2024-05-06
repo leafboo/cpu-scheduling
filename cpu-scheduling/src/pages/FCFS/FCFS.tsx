@@ -13,11 +13,11 @@ export default function FCFS(props: any) {
           <label htmlFor="burst-times">Burst times:</label>
           <br />
           <input type="text" name="" id="burst-times" onChange={(event) => { 
-              let value = event.target.value
-              props.setBurstTimes(value.split(" ").map(Number)) 
-            }} placeholder='e.g. 9 2 6 4' />
+                let value = event.target.value
+                props.setResults({ ...props.results, "Burst Time": value.split(" ").map(Number) });
+              }} placeholder='e.g. 9 2 6 4' />
         </div>
-        <Compute burstTimes={props.burstTimes} />
+        <Compute results={props.results} />
       </div>
      
   )
