@@ -8,7 +8,7 @@ export default function MainPage(props: any) {
   React.useEffect(() => {
     props.setResults({
       "Process": [],
-      "Arrival time": [],
+      "Arrival Time": [],
       "Burst Time": [],
       "Completion Time": [],
       "Turnaround Time": [],

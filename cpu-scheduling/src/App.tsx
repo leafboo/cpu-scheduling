@@ -17,7 +17,7 @@ export default function App() {
 
   const [results, setResults] = React.useState({  
     "Process": [],
-    "Arrival time": [],
+    "Arrival Time": [],
     "Burst Time": [],
     "Completion Time": [],
     "Turnaround Time": [],
