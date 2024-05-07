@@ -3,15 +3,18 @@ import Table from '../../output/table/Table.tsx'
 import ComputeCSS from './Compute.module.css'
 
 export default function Compute(props: any) {
-
+  const [isButtonPressed, setIsButtonPressed] = React.useState(false)
 
   return (
     <>
       <button className={ComputeCSS['compute-button']} onClick={() => {
-        console.log(props.results["Burst Times"])
+        setIsButtonPressed(true)
 
       }}>Compute</button>
-      <Table results={props.results} />
+      {
+        isButtonPressed ? <Table results={props.results} /> : null
+      }
+      
     </>
   )
 }

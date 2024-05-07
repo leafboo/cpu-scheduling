@@ -51,7 +51,9 @@ export default function App() {
                   results={results}
                   setResults={setResults} />
           ) :pageNumber === 4 ? (
-            <SJF changePage={changePage} />
+            <SJF changePage={changePage}
+                 results={results}
+                 setResults={setResults} />
           ) : pageNumber === 5 ? (
             <SRTF changePage={changePage} />
           ) : pageNumber === 6 ? (
