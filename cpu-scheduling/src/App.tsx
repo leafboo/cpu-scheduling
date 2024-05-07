@@ -43,7 +43,9 @@ export default function App() {
       <div className={AppCSS['box']}>
         {
           pageNumber === 2 ? (
-            <MainPage changePage={changePage} algorithms={algorithms} />
+            <MainPage changePage={changePage} 
+                      algorithms={algorithms}
+                      setResults={setResults} />
           ) : pageNumber === 3 ? (
             <FCFS changePage={changePage}
                   results={results}

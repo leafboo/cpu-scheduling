@@ -26,7 +26,7 @@ export default function Table(props: any) {
         Turnaround Time
       </div>
       <div>
-          Waiting Time
+        Waiting Time
       </div>
     </div>
   )

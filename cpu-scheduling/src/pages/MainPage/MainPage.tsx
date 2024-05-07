@@ -5,6 +5,16 @@ import MainPageCSS from './MainPage.module.css'
 
 
 export default function MainPage(props: any) {
+  React.useEffect(() => {
+    props.setResults({
+      "Process": [],
+      "Arrival time": [],
+      "Burst Time": [],
+      "Completion Time": [],
+      "Turnaround Time": [],
+      "Waiting Time": []
+    })
+  }, [])
 
   const AlgorithmElement = props.algorithms.map((algo: {name: string; pageNumber: number}) => 
     <Algorithm name={algo.name} changePage={props.changePage} pageNumber={algo.pageNumber} />
