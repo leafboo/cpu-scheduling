@@ -4,6 +4,28 @@ import GoBack from '../../buttons/GoBack/GoBack.tsx'
 import FCFSCSS from './FCFS.module.css'
 
 export default function FCFS(props: any) {
+  let processes = [];
+  let arrivalTimes = [];
+  let completionTime = [];
+  let sum = 0;
+  
+  for (let i = 0; i < props.results["Burst Time"].length; i ++) {
+    processes.push(i + 1);
+    arrivalTimes.push(i);
+    sum += props.results["Burst Time"][i]
+    completionTime.push(sum)
+  }
+  console.log(props.results["Completion Time"])
+  React.useEffect(() => {
+    props.setResults((prevState: any) => ({
+      ...prevState,
+      "Process": processes,
+      "Arrival Time": arrivalTimes,
+      "Completion Time": completionTime
+    }));
+  }, [props.results["Burst Time"]])
+
+  console.log(props.results["Completion Time"])
 
   return (
       <div className={FCFSCSS['fcfs-container']}>
@@ -14,19 +36,12 @@ export default function FCFS(props: any) {
           <label htmlFor="burst-times">Burst times:</label>
           <br />
           <input type="text" name="" id="burst-times" onChange={(event) => { 
-                let value = event.target.value
-                let processes = []
-                let arrivalTimes = []
-                for (let i = 0; i < props.results["Burst Time"].length; i ++) {
-                  processes.push(i + 1)
-                  arrivalTimes.push(i)
-                }
+                let value = event.target.value;
+                console.log(value)
                 
                 props.setResults((prevState: any) => ({
                   ...prevState,
-                  "Process": processes,
-                  "Arrival Time": arrivalTimes,
-                  "Burst Time": value.split(" ").map(Number),
+                  "Burst Time": value.split(" ").map(Number)
                 }));
               }} placeholder='e.g. 9 2 6 4' />
         </div>
