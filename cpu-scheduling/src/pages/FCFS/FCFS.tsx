@@ -9,6 +9,7 @@ export default function FCFS(props: any) {
   let completionTime = [];
   let sum = 0;
   let turnaroundTime = [];
+  let waitingTime = [];
   
   for (let i = 0; i < props.results["Burst Time"].length; i ++) {
     processes.push(i + 1);
@@ -16,15 +17,17 @@ export default function FCFS(props: any) {
     sum += props.results["Burst Time"][i]
     completionTime.push(sum)
     turnaroundTime.push(completionTime[i] - arrivalTimes[i])
+    waitingTime.push(turnaroundTime[i] - props.results["Burst Time"][i])
   }
-  console.log(props.results["Turnaround Time"])
+  
   React.useEffect(() => {
     props.setResults((prevState: any) => ({
       ...prevState,
       "Process": processes,
       "Arrival Time": arrivalTimes,
       "Completion Time": completionTime,
-      "Turnaround Time": turnaroundTime
+      "Turnaround Time": turnaroundTime,
+      "Waiting Time": waitingTime
     }));
   }, [props.results["Burst Time"]])
 

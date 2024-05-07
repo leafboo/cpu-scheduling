@@ -7,6 +7,7 @@ export default function Table(props: any) {
   const separatedArrivalTime = props.results["Arrival Time"] ? props.results["Arrival Time"].join(', ') : '';
   const separatedCompletionTime = props.results["Completion Time"] ? props.results["Completion Time"].join(', ') : '';
   const separatedTurnaroundTime = props.results["Turnaround Time"] ? props.results["Turnaround Time"].join(', ') : '';
+  const separatedWaitingTime = props.results["Waiting Time"] ? props.results["Waiting Time"].join(', ') : '';
 
 
   return (
@@ -27,7 +28,7 @@ export default function Table(props: any) {
         Turnaround Time: {separatedTurnaroundTime}
       </div>
       <div>
-        Waiting Time
+        Waiting Time: {separatedWaitingTime}
       </div>
     </div>
   )
