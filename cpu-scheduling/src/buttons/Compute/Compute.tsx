@@ -11,6 +11,7 @@ export default function Compute(props: any) {
         console.log(props.results["Burst Times"])
 
       }}>Compute</button>
+      <Table results={props.results} />
     </>
   )
 }
