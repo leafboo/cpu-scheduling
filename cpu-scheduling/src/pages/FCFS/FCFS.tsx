@@ -4,16 +4,7 @@ import GoBack from '../../buttons/GoBack/GoBack.tsx'
 import FCFSCSS from './FCFS.module.css'
 
 export default function FCFS(props: any) {
-  let processes: any = []
-  function addProcesses() {
-    if (props.results["Burst Times"]) {
-      for (let i = 1; i <= props.results["Burst Times"].length; i++) {
-        processes.push(i)
-      }
-    }
-    
-  }
- 
+
   return (
       <div className={FCFSCSS['fcfs-container']}>
         <div>FCFS</div>
@@ -24,10 +15,17 @@ export default function FCFS(props: any) {
           <br />
           <input type="text" name="" id="burst-times" onChange={(event) => { 
                 let value = event.target.value
-                addProcesses()
+                let processes = []
+                let arrivalTimes = []
+                for (let i = 0; i < props.results["Burst Time"].length; i ++) {
+                  processes.push(i + 1)
+                  arrivalTimes.push(i)
+                }
+                
                 props.setResults((prevState: any) => ({
                   ...prevState,
                   "Process": processes,
+                  "Arrival Time": arrivalTimes,
                   "Burst Time": value.split(" ").map(Number),
                 }));
               }} placeholder='e.g. 9 2 6 4' />

@@ -2,18 +2,21 @@ import React from 'react'
 import TableCSS from './Table.module.css'
 
 export default function Table(props: any) {
-  //const separatedProcess = props.results["Process"] ? props.results["Processs"].join(', ') : '';
-  const separatedArrivalTime = props.results["Burst Time"] ? props.results["Burst Time"].join(', ') : '';
+  const separatedProcess = props.results["Process"] ? props.results["Process"].join(', ') : '';
+  const separatedBurstTime = props.results["Burst Time"] ? props.results["Burst Time"].join(', ') : '';
+  const separatedArrivalTime = props.results["Arrival Time"] ? props.results["Arrival Time"].join(', ') : '';
+
+
   return (
     <div className={TableCSS['table-container']}>
       <div>
-        Process: {/*separatedProcess*/}
+        Process: {separatedProcess}
       </div>
       <div>
-        Arrival Time
+        Arrival Time: {separatedArrivalTime}
       </div>
       <div>
-        Burst Time: {separatedArrivalTime}
+        Burst Time: {separatedBurstTime}
       </div>
       <div>
         Completion Time
