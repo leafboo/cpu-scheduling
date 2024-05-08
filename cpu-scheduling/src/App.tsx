@@ -21,7 +21,8 @@ export default function App() {
     "Burst Time": [],
     "Completion Time": [],
     "Turnaround Time": [],
-    "Waiting Time": []
+    "Waiting Time": [],
+    "Priority": []
   });
   console.log(results)
 
@@ -57,7 +58,9 @@ export default function App() {
           ) : pageNumber === 5 ? (
             <SRTF changePage={changePage} />
           ) : pageNumber === 6 ? (
-            <PR changePage={changePage} />
+            <PR changePage={changePage}
+                results={results}
+                setResults={setResults} />
           ) : pageNumber === 7 ? (
             <RR changePage={changePage} />
           ) : (
