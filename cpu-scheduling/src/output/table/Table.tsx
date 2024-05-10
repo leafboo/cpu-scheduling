@@ -2,33 +2,45 @@ import React from 'react'
 import TableCSS from './Table.module.css'
 
 export default function Table(props: any) {
-  const separatedProcess = props.results["Process"] ? props.results["Process"].join(', ') : '';
-  const separatedBurstTime = props.results["Burst Time"] ? props.results["Burst Time"].join(', ') : '';
-  const separatedArrivalTime = props.results["Arrival Time"] ? props.results["Arrival Time"].join(', ') : '';
-  const separatedCompletionTime = props.results["Completion Time"] ? props.results["Completion Time"].join(', ') : '';
-  const separatedTurnaroundTime = props.results["Turnaround Time"] ? props.results["Turnaround Time"].join(', ') : '';
-  const separatedWaitingTime = props.results["Waiting Time"] ? props.results["Waiting Time"].join(', ') : '';
+  
+
+  const process = props.results["Process"].map((process: any, index:number) => <div key={`${process}-${index}`}>{process}</div>)
+  const arrivalTime = props.results["Arrival Time"].map((process: any, index:number) => <div key={`${process}-${index}`}>{process}</div>)
+  const burstTime = props.results["Burst Time"].map((process: any, index:number) => <div key={`${process}-${index}`}>{process}</div>)
+  const completionTime = props.results["Completion Time"].map((process: any, index:number) => <div key={`${process}-${index}`}>{process}</div>)
+  const turnaroundTime = props.results["Turnaround Time"].map((process: any, index:number) => <div key={`${process}-${index}`}>{process}</div>)
+  const waitingTime = props.results["Waiting Time"].map((process: any, index:number) => <div key={`${process}-${index}`}>{process}</div>)
 
 
+
+
+
+ 
   return (
     <div className={TableCSS['table-container']}>
-      <div>
-        Process: {separatedProcess}
+      <div className={TableCSS['process-container']}>
+        process
+        {process}
       </div>
-      <div>
-        Arrival Time: {separatedArrivalTime}
+      <div className={TableCSS['arrival-time-container']}>
+        arrival time
+        {arrivalTime}
       </div>
-      <div>
-        Burst Time: {separatedBurstTime}
+      <div className={TableCSS['burst-time-container']}>
+        burst time
+        {burstTime}
       </div>
-      <div>
-        Completion Time: {separatedCompletionTime}
+      <div className={TableCSS['completion-time-container']}>
+        completion time
+        {completionTime}
       </div>
-      <div>
-        Turnaround Time: {separatedTurnaroundTime}
+      <div className={TableCSS['turnaround-time-container']}>
+       turnaround time
+       {turnaroundTime}
       </div>
-      <div>
-        Waiting Time: {separatedWaitingTime}
+      <div className={TableCSS['waiting-time-container']}>
+        waiting time
+        {waitingTime}
       </div>
     </div>
   )

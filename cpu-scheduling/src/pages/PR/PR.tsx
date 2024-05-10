@@ -7,8 +7,7 @@ export default function PR(props: any) {
   const [tempBurstTime, setTempBurstTime] = React.useState([])
   console.log(props.results["Burst Time"])
 
-  // sick rn, gotta make a commit real quick
-  let i
+  
 
   let processes = [];
   let arrivalTimes = [];
