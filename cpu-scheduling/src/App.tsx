@@ -56,13 +56,17 @@ export default function App() {
                  results={results}
                  setResults={setResults} />
           ) : pageNumber === 5 ? (
-            <SRTF changePage={changePage} />
+            <SRTF changePage={changePage}
+                  results={results}
+                  setResults={setResults} />
           ) : pageNumber === 6 ? (
             <PR changePage={changePage}
                 results={results}
                 setResults={setResults} />
           ) : pageNumber === 7 ? (
-            <RR changePage={changePage} />
+            <RR changePage={changePage}
+                results={results}
+                setResults={setResults} />
           ) : (
             <HomePage changePage={changePage} />
           )
