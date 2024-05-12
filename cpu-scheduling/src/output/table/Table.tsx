@@ -19,27 +19,27 @@ export default function Table(props: any) {
   return (
     <div className={TableCSS['table-container']}>
       <div className={TableCSS['process-container']}>
-        process
+        <span>process</span>
         {process}
       </div>
       <div className={TableCSS['arrival-time-container']}>
-        arrival time
+        <span>arrival time</span>
         {arrivalTime}
       </div>
       <div className={TableCSS['burst-time-container']}>
-        burst time
+        <span>burst time</span>
         {burstTime}
       </div>
       <div className={TableCSS['completion-time-container']}>
-        completion time
+        <span>completion time</span>
         {completionTime}
       </div>
       <div className={TableCSS['turnaround-time-container']}>
-       turnaround time
+       <span>turnaround time</span>
        {turnaroundTime}
       </div>
       <div className={TableCSS['waiting-time-container']}>
-        waiting time
+        <span>waiting time</span>
         {waitingTime}
       </div>
     </div>

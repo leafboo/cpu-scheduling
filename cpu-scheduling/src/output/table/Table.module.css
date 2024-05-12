@@ -1,8 +1,11 @@
 .table-container {
   position: absolute;
-  bottom: -10rem;
+  bottom: -15rem;
   display: flex;
   justify-content: space-between;
+  border: 1px solid white;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
 }
 
 .table-container > div {
@@ -10,5 +13,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.table-container > div > span {
+  border-bottom: 1px solid white;
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  padding-bottom: .6rem;
+}
+
+.table-container > div > div {
+  margin-top: 1rem;
 }
 
