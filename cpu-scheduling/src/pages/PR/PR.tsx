@@ -5,8 +5,6 @@ import PRCSS from './PR.module.css'
 
 export default function PR(props: any) {
   const [tempBurstTime, setTempBurstTime] = React.useState([])
-  console.log(props.results["Burst Time"])
-
   
 
   let processes = [];
@@ -56,14 +54,20 @@ export default function PR(props: any) {
         <br />
         <input type="text" name="" id="priority" onChange={(event) => {
           let value = event.target.value
-          const indices = Array.from(tempBurstTime.keys());
+          if (props.results["Priority"]) {
+            const indices = Array.from(tempBurstTime.keys());
           indices.sort((a: any, b: any) => props.results["Priority"][a] - props.results["Priority"][b]);
-          console.log(indices)
+            
+            props.setResults((prevState: any) => ({
+              ...prevState,
+              "Burst Time": indices.map((index: any) => tempBurstTime[index])
+            }))
+          }
+          
           
           props.setResults((prevState: any) => ({
             ...prevState,
-            "Priority": value.split(" ").map(Number),
-            "Burst Time": indices.map((index: any) => tempBurstTime[index])
+            "Priority": value.split(" ").map(Number)
           }))
         }} placeholder='e.g. 2 1 0 3' />
       </div>

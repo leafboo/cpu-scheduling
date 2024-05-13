@@ -3,9 +3,7 @@ import HomePage from './pages/HomePage/HomePage.tsx'
 import MainPage from './pages/MainPage/MainPage.tsx'
 import FCFS from './pages/FCFS/FCFS.tsx'
 import SJF from './pages/SJF/SJF.tsx'
-import SRTF from './pages/SRTF/SRTF.tsx'
 import PR from './pages/PR/PR.tsx'
-import RR from './pages/RR/RR.tsx'
 
 import AppCSS from './App.module.css'
 
@@ -29,9 +27,7 @@ export default function App() {
   const algorithms = [
     {name: "FCFS", pageNumber: 3},
     {name: "SJF", pageNumber: 4},
-    {name: "SRTF", pageNumber: 5},
-    {name: "PR", pageNumber: 6},
-    {name: "RR", pageNumber: 7}
+    {name: "PR", pageNumber: 5},
   ]
 
   function changePage(num: number) {
@@ -56,15 +52,7 @@ export default function App() {
                  results={results}
                  setResults={setResults} />
           ) : pageNumber === 5 ? (
-            <SRTF changePage={changePage}
-                  results={results}
-                  setResults={setResults} />
-          ) : pageNumber === 6 ? (
             <PR changePage={changePage}
-                results={results}
-                setResults={setResults} />
-          ) : pageNumber === 7 ? (
-            <RR changePage={changePage}
                 results={results}
                 setResults={setResults} />
           ) : (
