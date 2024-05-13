@@ -1,4 +1,3 @@
-import React from 'react'
 import ProcessCSS from './Process.module.css'
 
 export default function Process(props: any) {

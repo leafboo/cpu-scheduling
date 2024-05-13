@@ -1,4 +1,3 @@
-import React from 'react'
 import HomePageCSS from './HomePage.module.css'
 
 export default function HomePage(props: any) {

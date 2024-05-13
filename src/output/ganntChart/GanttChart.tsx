@@ -1,4 +1,3 @@
-import React from 'react'
 import Process from './process/Process.tsx'
 import GanttChartCSS from './GanttChart.module.css'
 
