@@ -6,3 +6,13 @@
   padding-bottom: .3rem;
   overflow: hidden;
 }
+
+.completion-times {
+  position: absolute;
+  bottom: -7.2rem;
+}
+
+.completion-times > span {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
