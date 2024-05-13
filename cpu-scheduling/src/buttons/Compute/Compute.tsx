@@ -1,4 +1,5 @@
 import React from 'react'
+import GanttChart from '../../output/ganntChart/GanttChart.tsx'
 import Table from '../../output/table/Table.tsx'
 import ComputeCSS from './Compute.module.css'
 
@@ -15,7 +16,12 @@ export default function Compute(props: any) {
 
       }}>Compute</button>
       {
-        isButtonPressed ? <Table results={tempResults} /> : null
+        isButtonPressed ? (
+          <>
+            <GanttChart results={tempResults} />
+            <Table results={tempResults} />
+          </>
+      ) : null
       }
       
     </>

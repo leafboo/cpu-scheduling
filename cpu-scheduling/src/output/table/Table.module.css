@@ -1,6 +1,6 @@
 .table-container {
   position: absolute;
-  bottom: -15rem;
+  bottom: -20rem;
   display: flex;
   justify-content: space-between;
   border: 1px solid white;
@@ -9,7 +9,6 @@
 }
 
 .table-container > div {
-  width: 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
