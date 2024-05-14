@@ -11,12 +11,12 @@
   width: 25rem;
   background-color: transparent;
   border: none;
-  color: white;
+  color: rgb(222, 222, 222);
   cursor: pointer;
   transition: background-color 0.15s;
 }
 
 .start-button:hover {
-  background-color: rgb(65, 39, 66);
+  background-color: rgb(60, 54, 86);
 }
 

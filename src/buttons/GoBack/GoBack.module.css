@@ -3,11 +3,11 @@
   width: 25rem;
   border: none;
   cursor: pointer;
-  color: white;
+  color: rgb(222, 222, 222);
   background-color: transparent;
   transition: background-color 0.15s;
 }
 
 .back-button:hover {
-  background-color: rgb(65, 39, 66);
+  background-color: rgb(60, 54, 86);
 }

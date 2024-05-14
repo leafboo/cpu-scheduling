@@ -1,13 +1,13 @@
 body {
-  background-color: rgb(15, 13, 15);
+  background-color: rgb(31, 28, 45);
   color: rgb(222, 222, 222);
   height: 100rem;
 }
 
 input {
   background-color: transparent;
-  color: white;
-  border: 1px solid white;
+  color: rgb(222, 222, 222);
+  border: 1px solid rgb(222, 222, 222);
   padding: .3rem .3rem;
 }
 
