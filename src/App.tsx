@@ -20,9 +20,11 @@ export default function App() {
     "Completion Time": [],
     "Turnaround Time": [],
     "Waiting Time": [],
-    "Priority": []
+    "Priority": [],
   });
-  console.log(results)
+  
+  const [averageWaitingTime, setAverageWaitingTime] = React.useState(0)
+  const [averageTurnaroundTime, setAverageTurnaroundTime] = React.useState(0)
 
   const algorithms = [
     {name: "FCFS", pageNumber: 3},
@@ -35,6 +37,17 @@ export default function App() {
     setPageNumber(num)
   }
 
+  const commonProps = {
+    changePage,
+    results,
+    setResults,
+    averageWaitingTime,
+    setAverageWaitingTime,
+    averageTurnaroundTime,
+    setAverageTurnaroundTime,
+    
+  }
+
   return (
     <div className={AppCSS['app-container']}>
       <div className={AppCSS['box']}>
@@ -44,17 +57,11 @@ export default function App() {
                       algorithms={algorithms}
                       setResults={setResults} />
           ) : pageNumber === 3 ? (
-            <FCFS changePage={changePage}
-                  results={results}
-                  setResults={setResults} />
+            <FCFS {...commonProps} />
           ) :pageNumber === 4 ? (
-            <SJF changePage={changePage}
-                 results={results}
-                 setResults={setResults} />
+            <SJF {...commonProps} />
           ) : pageNumber === 5 ? (
-            <PR changePage={changePage}
-                results={results}
-                setResults={setResults} />
+            <PR {...commonProps} />
           ) : (
             <HomePage changePage={changePage} />
           )
