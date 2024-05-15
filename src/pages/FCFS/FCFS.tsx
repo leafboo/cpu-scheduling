@@ -38,9 +38,8 @@ export default function FCFS(props: any) {
         <div>FCFS</div>
         <GoBack changePage={props.changePage}
                 pageNumber={2} />
-        <div>
+        <div className={FCFSCSS['user-inputs']}>
           <label htmlFor="burst-times">Burst times:</label>
-          <br />
           <input type="text" name="" id="burst-times" onChange={(event) => { 
                 let value = event.target.value;
                 console.log(value)

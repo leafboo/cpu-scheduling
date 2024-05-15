@@ -4,3 +4,28 @@
   align-items: center;
   position: relative;
 }
+
+.fcfs-container > .user-inputs {
+  margin-top: .2rem;
+  position: relative;
+  width: 25rem;
+  margin-bottom: 1rem;
+}
+
+.fcfs-container > div > label {
+  position: absolute;
+  left: 1rem;
+}
+
+.fcfs-container > div > input {
+  background-color: transparent;
+  position: absolute;
+  left: 7rem;
+  border: none;
+  width: 15rem;
+}
+
+.fcfs-container > div > input:focus {
+  outline: none;
+}
+
