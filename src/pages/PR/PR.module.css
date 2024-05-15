@@ -4,3 +4,32 @@
   align-items: center;
   position: relative;
 }
+
+.pr-container > .user-inputs {
+  margin-top: .2rem;
+  position: relative;
+  width: 25rem;
+  margin-bottom: 1rem;
+}
+
+.pr-container > div > label {
+  position: absolute;
+  left: 1rem;
+}
+
+.pr-container > div > .priority {
+  position: absolute;
+  left: 2.5rem;
+}
+
+.pr-container > div > input {
+  background-color: transparent;
+  position: absolute;
+  left: 7rem;
+  border: none;
+  width: 15rem;
+}
+
+.pr-container > div > input:focus {
+  outline: none;
+}

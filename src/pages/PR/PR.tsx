@@ -40,9 +40,8 @@ export default function PR(props: any) {
       <GoBack changePage={props.changePage}
               pageNumber={2} />
 
-      <div>
+      <div className={PRCSS['user-inputs']}>
         <label htmlFor="burst-times">Burst times:</label>
-        <br />
         <input type="text" name="" id="burst-times" onChange={(event) => { 
                 let value: any = event.target.value;
                 console.log(value)
@@ -50,8 +49,8 @@ export default function PR(props: any) {
                 setTempBurstTime(value.split(" ").map(Number))
               }} placeholder='e.g. 9 2 6 4' />
         <br />
-        <label htmlFor="priority">Priority:</label>
         <br />
+        <label htmlFor="priority" className={PRCSS['priority']}>Priority:</label>
         <input type="text" name="" id="priority" onChange={(event) => {
           let value = event.target.value
           if (props.results["Priority"]) {
