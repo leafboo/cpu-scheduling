@@ -31,7 +31,6 @@ export default function FCFS(props: any) {
     }));
   }, [props.results["Burst Time"]])
 
-  
 
   return (
       <div className={FCFSCSS['fcfs-container']}>
@@ -50,7 +49,9 @@ export default function FCFS(props: any) {
                 }));
               }} placeholder='e.g. 9 2 6 4' />
         </div>
-        <Compute results={props.results} />
+        <Compute results={props.results}
+                 setAverageTurnaroundTime={props.setAverageTurnaroundTime}
+                 setAverageWaitingTime={props.setAverageWaitingTime} />
       </div>
      
   )

@@ -6,11 +6,17 @@ import ComputeCSS from './Compute.module.css'
 export default function Compute(props: any) {
   const [isButtonPressed, setIsButtonPressed] = React.useState(false)
   const [tempResults, setTempResults] = React.useState()
- 
 
+  function computeAverage() {
+    props.setAverageTurnaroundTime(props.results['Turnaround Time'].reduce((sum: any, current: any) => sum + current, 0))
+    props.setAverageWaitingTime(props.results['Waiting Time'].reduce((sum: any, current: any) => sum + current, 0))
+  }
+ 
+  
   return (
     <>
       <button className={ComputeCSS['compute-button']} onClick={() => {
+        computeAverage()
         setIsButtonPressed(true)
         setTempResults(props.results)
 

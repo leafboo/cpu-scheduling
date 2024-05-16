@@ -70,7 +70,9 @@ export default function PR(props: any) {
           }))
         }} placeholder='e.g. 2 1 0 3' />
       </div>
-      <Compute results={props.results} />
+      <Compute results={props.results}
+               setAverageTurnaroundTime={props.setAverageTurnaroundTime}
+               setAverageWaitingTime={props.setAverageWaitingTime} />
     </div>
   )
 }

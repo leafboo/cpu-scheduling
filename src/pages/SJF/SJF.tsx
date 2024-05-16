@@ -33,7 +33,6 @@ export default function SJF(props: any) {
     }));
   }, [props.results["Burst Time"]])
 
-  console.log(props.results["Burst Time"])
 
   return (
     <div className={SJFCSS['sjf-container']}>
@@ -53,7 +52,9 @@ export default function SJF(props: any) {
                 }));
               }} placeholder='e.g. 9 2 6 4' />
       </div>  
-      <Compute results={props.results} />
+      <Compute results={props.results}
+               setAverageTurnaroundTime={props.setAverageTurnaroundTime}
+               setAverageWaitingTime={props.setAverageWaitingTime} />
     </div>
   )
 }
