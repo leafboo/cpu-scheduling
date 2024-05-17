@@ -25,7 +25,9 @@ export default function Compute(props: any) {
         isButtonPressed ? (
           <>
             <GanttChart results={tempResults} />
-            <Table results={tempResults} />
+            <Table results={tempResults}
+                   averageTurnaroundTime={props.averageTurnaroundTime}
+                   averageWaitingTime={props.averageWaitingTime} />
           </>
       ) : null
       }

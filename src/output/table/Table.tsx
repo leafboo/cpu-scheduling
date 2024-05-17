@@ -9,6 +9,7 @@ export default function Table(props: any) {
   const completionTime = props.results["Completion Time"].map((process: any, index:number) => <div key={`${process}-${index}`}>{process}</div>)
   const turnaroundTime = props.results["Turnaround Time"].map((process: any, index:number) => <div key={`${process}-${index}`}>{process}</div>)
   const waitingTime = props.results["Waiting Time"].map((process: any, index:number) => <div key={`${process}-${index}`}>{process}</div>)
+  
 
 
 
@@ -32,14 +33,20 @@ export default function Table(props: any) {
       <div className={TableCSS['completion-time-container']}>
         <span>completion time</span>
         {completionTime}
+        <br /><br />
+        Total:
       </div>
       <div className={TableCSS['turnaround-time-container']}>
        <span>turnaround time</span>
        {turnaroundTime}
+       <br /><br />
+       {props.averageTurnaroundTime}
       </div>
       <div className={TableCSS['waiting-time-container']}>
         <span>waiting time</span>
         {waitingTime}
+        <br /><br />
+        {props.averageWaitingTime}
       </div>
     </div>
   )
