@@ -54,7 +54,9 @@ export default function SJF(props: any) {
       </div>  
       <Compute results={props.results}
                setAverageTurnaroundTime={props.setAverageTurnaroundTime}
-               setAverageWaitingTime={props.setAverageWaitingTime} />
+               setAverageWaitingTime={props.setAverageWaitingTime}
+               averageTurnaroundTime={props.averageTurnaroundTime}
+               averageWaitingTime={props.averageWaitingTime} />
     </div>
   )
 }
