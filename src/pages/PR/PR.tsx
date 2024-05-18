@@ -22,17 +22,22 @@ export default function PR(props: any) {
     turnaroundTime.push(completionTime[i] - arrivalTimes[i])
     waitingTime.push(turnaroundTime[i] - props.results["Burst Time"][i])
   }
-  
+
   React.useEffect(() => {
+    const indices = Array.from(tempBurstTime.keys());
+    indices.sort((a: any, b: any) => props.results["Priority"][a] - props.results["Priority"][b]);
+
     props.setResults((prevState: any) => ({
       ...prevState,
       "Process": processes,
       "Arrival Time": arrivalTimes,
       "Completion Time": completionTime,
       "Turnaround Time": turnaroundTime,
-      "Waiting Time": waitingTime
+      "Waiting Time": waitingTime,
+      "Burst Time": indices.map((index: any) => tempBurstTime[index])
     }));
-  }, [props.results["Burst Time"]])
+
+  }, [props.results["Priority"]])
  
   return (
     <div className={PRCSS['pr-container']}>
@@ -44,7 +49,6 @@ export default function PR(props: any) {
         <label htmlFor="burst-times">Burst times:</label>
         <input type="text" name="" id="burst-times" onChange={(event) => { 
                 let value: any = event.target.value;
-                console.log(value)
                 
                 setTempBurstTime(value.split(" ").map(Number))
               }} placeholder='e.g. 9 2 6 4' />
@@ -53,16 +57,6 @@ export default function PR(props: any) {
         <label htmlFor="priority" className={PRCSS['priority']}>Priority:</label>
         <input type="text" name="" id="priority" onChange={(event) => {
           let value = event.target.value
-          if (props.results["Priority"]) {
-            const indices = Array.from(tempBurstTime.keys());
-          indices.sort((a: any, b: any) => props.results["Priority"][a] - props.results["Priority"][b]);
-            
-            props.setResults((prevState: any) => ({
-              ...prevState,
-              "Burst Time": indices.map((index: any) => tempBurstTime[index])
-            }))
-          }
-          
           
           props.setResults((prevState: any) => ({
             ...prevState,
