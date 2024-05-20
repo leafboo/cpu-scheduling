@@ -12,10 +12,7 @@ export default function Table(props: any) {
   
 
 
-
-
-
- 
+  
   return (
     <div className={TableCSS['table-container']}>
       <div className={TableCSS['process-container']}>

@@ -67,6 +67,16 @@ export default function App() {
           )
         }
       </div>
+
+      {
+        pageNumber === 1 ? (
+          <div className={AppCSS['credits']}>
+            <br />
+            <span>Made by: Jan Romel Caranguian & Jude Andrei Pasicolan</span>
+          </div>
+        ) : null
+      }
+      
       
       
     </div>

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   margin-top: 12rem;
-  
+  position: relative;
 }
 
 .box {
@@ -12,4 +12,10 @@
   border: 1px solid rgb(222, 222, 222);
   border-radius: .4rem;
 }
+
+.app-container > .credits {
+  position: absolute;
+  top: 5rem;
+}
+
 
